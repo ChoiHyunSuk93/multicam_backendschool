@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 정보 사이트</title>
+    <link rel="stylesheet" href="design.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $("#b1").click(function () {
+                location.href = 'movieRanking.html'
+            })
+            $("#b2").click(function () {
+                location.href = 'movieReservation.html'
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- html 2page 이상
+css 1개 이상 외부로 만들어 link
+js 또는 jquery사용
+form 1개 이상
+이미지 2개 이상 
+table 1개 이상 -->
+
+    <div id="total"> <!--전체div-->
+        <div id="top">
+            <h1>영화 정보 페이지</h1> <!--사이트 이름-->
+        </div>
+        <hr color="red">
+        <div id="center"> <!--이동 링크 들어가는 칸-->
+            <table id="main">
+                <tr>
+                    <td>예매순위 TOP10</td>
+                    <td><button id="b1">이동</button></td>
+                </tr>
+                <tr>
+                    <td>예매하러 가기</td>
+                    <td><button id="b2">이동</button></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>

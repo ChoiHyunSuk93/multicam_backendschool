@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pay() {
+            // 입력-입력한 값 가지고 오기
+            market = document.getElementById("market").value
+            price = document.getElementById("price").value
+            payment = document.getElementById("payment").value
+            // 숫자 변환 처리
+            price2 = parseInt(price)
+            if (payment == '2') { //신용카드 + 1000
+                price2 = price2 + 1000 //cpu가 money2의 값을 가지고와서 1000을 더해줌.
+            } else if (payment === '3') {
+                price2 = price2 + 500
+            }
+            //출력-결과를 출력
+            text = "구매상점은 " + market + "이고, 결제수단은 " + payment + "이고, 결제금액은 <font color=red>" + price2 + "</font>원 입니다."
+            result_tag = document.getElementById("result")
+            result_tag.innerHTML = text
+        }
+    </script>
+</head>
+
+<body>
+    구매상점 : <input type="text" id="market" value="더조은샵"> <br>
+    결제금액 : <input type="text" id="price" value="10000"> <br>
+    입력수단 : [1.계좌이체, 2.신용카드, 3.휴대폰결제] <br>
+    <input type="text" id="payment" value="1"><br>
+    <button onclick="pay()">결제 버튼</button>
+    <hr color="blue">
+    <div id="result">
+
+    </div>
+
+</body>
+
+</html>
